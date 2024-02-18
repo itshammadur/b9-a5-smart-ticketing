@@ -1,12 +1,24 @@
+
 const seats = document.getElementsByClassName("seatNumber");
 let seatPrice = 550;
 let count = 0;
 let seatDecrement = 40;
 for (const seat of seats) {
     seat.addEventListener("click", function select(event) {
-        event.target.classList.add('bg-green-500');
         count++;
         seatDecrement--;
+        if( count > 4){
+            
+            return ;
+        }
+        else if(count === 4){
+            enabledByBtn("applyBtn");
+        }
+        else if(count < 4){
+            disabledByBtn("applyBtn");
+        }
+        
+        event.target.classList.add('bg-green-500');
         //    create element
         const ticketName = event.target.innerText;
         const ticketPrice = seatPrice;
@@ -40,6 +52,7 @@ for (const seat of seats) {
 
 // access apply btn
 const applyBtn = document.getElementById("applyBtn");
+
 applyBtn.addEventListener("click", function () {
     //  coupon box access
     const couponBox = document.getElementById("couponBox").value;
@@ -57,8 +70,9 @@ applyBtn.addEventListener("click", function () {
         div.appendChild(p2);
         showDiscount.appendChild(div);
         // grand total 
-        const grand = seatPrice * count - discount;
+        const grand = seatTotalPrice - discount;
         textInner("grandTotal", grand);
+        disabledByBtn("applyBtn");
 
     }
     else if (couponBox === "Couple 20") {
@@ -75,8 +89,18 @@ applyBtn.addEventListener("click", function () {
         div.appendChild(p2);
         showDiscount.appendChild(div);
         // grand total
-        const grand = seatPrice * count - discount;
+        const grand = seatTotalPrice - discount;
         textInner("grandTotal", grand); 
+        disabledByBtn("applyBtn");
     }
 
 })
+
+// next btn 
+const nextBtn = document.getElementById("nextBtn");
+nextBtn.addEventListener("click", function(e){
+        setHiddenAddClass("landPage", "security");
+        setHiddenRemoveClass("success")
+    
+})
+

@@ -23,7 +23,7 @@
 </head>
 
 <body>
-    <nav class="  w-4/5 mx-auto">
+    <nav class=" landPage  w-4/5 mx-auto">
         <div>
             <div class="navbar bg-base-100">
                 <div class="navbar-start">
@@ -69,7 +69,7 @@
         </div>
 
     </nav>
-    <header class=" w-4/5 mx-auto">
+    <header class=" landPage w-4/5 mx-auto">
         <div
             class="bg-[url('images/banner.png')] h-[80vh] bg-no-repeat bg-cover bg-bottom rounded-2xl flex justify-center items-center">
             <div class="space-y-4">
@@ -117,7 +117,7 @@
     </header>
     <main>
         <!-- Best offers for you section -->
-        <section class=" w-4/5 mx-auto">
+        <section class=" landPage w-4/5 mx-auto">
             <h1 class="text-4xl font-raleway font-bold text-center">Best offers for you</h1>
             <!-- card 1 -->
             <div class="flex gap-6 mt-10">
@@ -153,7 +153,7 @@
             </div>
         </section>
         <!-- P.H Paribahan section -->
-        <section class=" border-t-2 border-[#1DD100] rounded-t-[6rem] px-32 mb-10">
+        <section class=" landPage border-t-2 border-[#1DD100] rounded-t-[6rem] px-32 mb-10">
             <div class="pt-20 space-y-3">
                 <h1 class="text-4xl font-raleway font-bold text-center">P.H Paribahan</h1>
                 <p class="opacity-80 text-center">Customize your journey with ease. <br> Choose your preferred seat
@@ -224,7 +224,7 @@
                     <div id="seat">
                         <!-- key1 -->
                         <div class="flex  my-1 w-full">
-                            <div class="rounded-xl bg-gray-300 px-4 py-2">A</div>
+                            <div class="rounded-xl bg-gray-300 size-10">A</div>
                             <div class=" w-1/2 flex justify-around pr-10">
                                 <div id="A1" class=" seatNumber rounded-xl bg-gray-300 px-7 py-2">A1</div>
                                 <div id="A2" class=" seatNumber rounded-xl bg-gray-300 px-7 py-2">A2</div>
@@ -384,12 +384,12 @@
                             <input type="text" placeholder="Enter your name" class="w-full py-3 px-3">
                         </label>
                         <label for="number" class="font-bold space-y-3">Phone Number* <br>
-                            <input type="number" name="number" id="" placeholder="Enter your phone number" class="w-full py-3 px-3" required>
+                            <input type="number" name="number" id="security" placeholder="Enter your phone number" class="w-full py-3 px-3" required >
                         </label>
                         <label for="email" class="font-bold space-y-3">Email ID <br>
                             <input type="email" name="email" id="" placeholder="Enter your email id" class="w-full py-3 px-3">
                         </label>
-                        <input type="submit" value="Next" class="w-full py-3 px-3 bg-[#1DD100] text-white text-xl font-extrabold" >
+                        <input id="nextBtn" type="submit" value="Next" class="w-full py-3 px-3 bg-[#1DD100] text-white text-xl font-extrabold" >
                         <div class="flex justify-evenly">
                             <a class="underline" href="#">Terms and Conditions</a>
                             <a class="underline" href="#">Cancellation Policy</a>
@@ -398,7 +398,7 @@
                 </div>
             </div>
         </section>
-        <section class="hidden">
+        <section id="success" class="hidden">
         <!-- complete section -->
             <div class="min-h-screen flex justify-center items-center">
                 <div class="card w-1/2 bg-base-100 shadow-xl">
