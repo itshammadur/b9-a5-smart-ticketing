@@ -131,7 +131,7 @@ function couponBtn(){
 function inputInformation(){
   const inputNumber = document.getElementById('input-number').value;
   const inputInfoBtn = document.getElementById('input-info-btn');
-  if(selectSeats.length > 0 ){
+  if(selectSeats.length > 0 || inputNumber===Number){
     inputInfoBtn.disabled = false;
   }
 }
