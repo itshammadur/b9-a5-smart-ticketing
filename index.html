@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HRH-Paribahan-E-tecketing</title>
+    <title>HRH-Paribahan-Webportal</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles/style.css">
@@ -23,7 +23,7 @@
                     <li><a>Search</a></li>
                 </ul>
               </div>
-              <a class="btn btn-ghost text-3xl font-extrabold">E-Ticket</a>
+              <a class="btn btn-ghost text-3xl font-extrabold">HRH--> E-Ticket portal</a>
             </div>
             <div class="navbar-center hidden lg:flex">
               <ul class="menu menu-horizontal px-1">
@@ -50,8 +50,9 @@
             <h1 class="text-[#1DD100] md:text-3xl lg:text-5xl font-bold  " >HRH Paribahan</h1>
             <p class=" text-white text-xs md:text-sm px-10 md:px-24 lg:px-32 xl:px-40 2xl:px-64 hidden lg:block ">Our bus paribahan service offers seamless transportation solutions with a focus on reliability and passenger satisfaction. ensuring a smooth journey for our passengers every time they travel with us</p>
                                             <!-- banner button  -->
-           <a href="#bus-section"> <button id="buy-tickets-btn"  class=" btn  bg-[#1DD100] font-bold  border-none xl:mt-10 ">Buy Tickets</button></a>
-
+           <!-- <a href="#bus-section"> </a> -->
+         <button 
+            onclick= "openTicketSection();" id="buy-tickets-btn"  class=" btn  bg-[#1DD100] font-bold  border-none xl:mt-10 ">Buy Tickets</button>
         </div>
             </div>
         </section>
@@ -271,11 +272,11 @@
                                   <!--  input section  -->
                         <div class="space-y-6">
                             <h1 class="font-bold">Passenger Name*</h1>
-                            <input type="text" placeholder="Enter your name" name="" id="" class=" border py-5 pl-6 w-full rounded-xl ">
-                            <h1 class="font-bold">Phone Number*</h1>
-                            <input id="input-number" onclick="inputInformation()" type="number" placeholder="Enter your phone number" name="" class=" border py-5 pl-6 w-full rounded-xl ">
+                            <input type="text" placeholder="Enter your name" name="" id="" class=" border py-5 pl-6 w-full rounded-xl " required>
+                            <h1 class="font-bold" >Phone Number*</h1>
+                            <input id="input-number" onclick="inputInformation()" type="number" placeholder="Enter your phone number" name="" class=" border py-5 pl-6 w-full rounded-xl" >
                             <h1 class="font-bold">Email ID</h1>
-                            <input type="email" name="" placeholder="Enter your email id" id="" class=" border py-5 pl-6 w-full rounded-xl  ">
+                            <input type="email" name="" placeholder="Enter your email id" id="" class=" border py-5 pl-6 w-full rounded-xl ">
                            
                             <a  href="#main-section-2"><button disabled id="input-info-btn" onclick="nextBtn()" class="btn w-full mt-5 text-white bg-[#1DD100]  rounded-2xl">Next</button></a>
                         </div>

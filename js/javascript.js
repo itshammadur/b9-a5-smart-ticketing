@@ -20,6 +20,11 @@ for(const seat of seats){
   })
 }
 
+function openTicketSection(){
+  const ticketSection = document.getElementById('bus-section');
+  ticketSection.scrollIntoView({behavior:'smooth'})
+}
+
 
 function selectseat(seatName){
  if(! selectSeats.includes(seatName)){
